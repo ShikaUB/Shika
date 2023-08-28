@@ -22,6 +22,4 @@
 <hr>
 <i>⚠️ This project is provided as-is. Developer doesn't take ANY responsibility over any problems, caused by userbot. By installing Shika you take all risks on you. Please, consider reading https://core.telegram.org/api/terms for more information.</i>
 <br>
-<hr>    
-<h1>Developer</h1>
-➤ Platon <a href="https://github.com/F1reWs">Github</a> | <a href="https://t.me/F1reW">Telegram</a> <br>
+<hr> 
