@@ -48,7 +48,7 @@ class UpdateMod(loader.Module):
             if diff:
                 await bot.send_message(
                     me.id,
-                    f"✔ Доступно обновление (<a href='https://github.com/HotDrify/teagram/commit/{last}'>{last[:6]}...</a>)"
+                    f"✔ Доступно обновление (<a href='https://github.com/ShikaUB/Shika/commit/{last}'>{last[:6]}...</a>)"
                 )
                 
         except CantInitiateConversation:
@@ -59,7 +59,7 @@ class UpdateMod(loader.Module):
         except CantParseEntities:
             await bot.send_message(
                 me.id,
-                f"✔ Доступно обновление (https://github.com/HotDrify/teagram/commit/{last})"
+                f"✔ Доступно обновление (https://github.com/ShikaUB/Shika/commit/{last})"
             )
         except Exception as error:
             await bot.send_message(
