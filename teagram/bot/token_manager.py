@@ -39,10 +39,10 @@ class TokenManager(Item):
                     seconds = response.text.split()[-2]
                     logger.error(f'Пожалуйста повторите через {seconds} секунд')
 
-            await conv.ask(f"Teagram UserBot of {utils.get_display_name(self._all_modules.me)[:45]}")
+            await conv.ask(f"Shika UserBot of {utils.get_display_name(self._all_modules.me)[:45]}")
             await conv.get_response()
 
-            bot_username = f"teagram_{utils.random_id(6)}_bot"
+            bot_username = f"shika_{utils.random_id(7)}_bot"
 
             await conv.ask(bot_username)
             
@@ -64,7 +64,6 @@ class TokenManager(Item):
             self._app.me = await self._app.get_me()
             await conv.ask_media("assets/bot_avatar.png", media_type="photo")
             await conv.get_response()
-# # надо аву поставить до папки teagram, нев ней а до нее
 
             await conv.ask("/setinline")
             await conv.get_response()
@@ -102,7 +101,7 @@ class TokenManager(Item):
             found = False
             for row in response.reply_markup.keyboard:
                 for button in row:
-                    search = re.search(r"@teagram_[0-9a-zA-Z]{6}_bot", button)
+                    search = re.search(r"@shika_[0-9a-zA-Z]{7}_bot", button)
                     if search:
                         await conv.ask(button)
                         found = True
@@ -111,7 +110,7 @@ class TokenManager(Item):
                 if found:
                     break
                 else:
-                    return logging.error("Нет созданного material бота")
+                    return logging.error("Нет созданного shika бота")
 
             time.sleep(1)
             response = await conv.get_response()
